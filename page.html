@@ -1,0 +1,32 @@
+<html>
+  <title>pagination</title>
+  <link rel="stylesheet" href="page3.css">
+  </head>
+<body background="Desert.jpg">
+  
+  <div id="mouni">
+  
+    <h1>pagination</h1>
+<table id="sol" class="center"></table>
+    <ul id="get"></ul>
+    </div>
+  <script src="pagination2.js"></script>
+  <script>
+  var inn="";
+  for(i=1;i<=Math.ceil(object.length/5);i++) {
+    inn +='<button onclick="trial('+i+');">'+i+'</button>';
+  }
+  document.getElementById("get").innerHTML="<button>&laquo</button><li>"+inn+"</li><li><button>&raquo</button></li>";
+  function trial(n){
+    var n=n*5;
+    var b=n-5;
+    var out="";
+    for(i=b;i<n;i++){
+      out+='<tr><td>'+object[i].id+'</td><td>'+object[i].name+'</td><td>'+object[i].email+'</td></tr>';
+      document.getElementById("sol").innerHTML="<th>id</th><th>name</th><th>email</th>"+out;
+    }
+  }
+  </script>
+</body>
+
+</html>
